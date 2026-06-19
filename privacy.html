@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bedly Privacy Policy</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --accent: #ff8a1c;
+      --text: #111111;
+      --muted: #62666d;
+      --surface: #f6f6f8;
+      --rule: #dedee3;
+    }
+
+    body {
+      margin: 0;
+      font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background: white;
+    }
+
+    .page {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 56px 22px 72px;
+    }
+
+    .page-header {
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 28px;
+      padding-bottom: 24px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 40px;
+      line-height: 1.1;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      margin: 30px 0 8px;
+      font-size: 23px;
+      letter-spacing: 0;
+    }
+
+    p, li {
+      color: var(--muted);
+    }
+
+    a {
+      color: var(--accent);
+    }
+
+    .badge {
+      display: inline-block;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .summary {
+      background: var(--surface);
+      border-radius: 8px;
+      padding: 16px 18px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text: #f4f4f6;
+        --muted: #c4c5ca;
+        --surface: #1d1d20;
+        --rule: #333339;
+      }
+
+      body {
+        background: #111114;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="page-header">
+      <span class="badge">Bedly</span>
+      <h1>Privacy Policy</h1>
+      <p>Effective date: June 16, 2026</p>
+    </div>
+
+    <div class="summary">
+      <p>Bedly is designed as a local-first alarm and morning routine app. The app does not sell personal data, track users across apps or websites, or upload bedroom photos.</p>
+    </div>
+
+    <h2>Data Collection</h2>
+    <p>Bedly does not include account creation, login, third-party tracking, analytics SDKs, advertising SDKs, or photo uploads.</p>
+    <p>Bedly Pro subscriptions are processed by Apple and managed with RevenueCat. RevenueCat receives subscription purchase history and an anonymous app user ID so the app can unlock Pro features, restore purchases, and show subscription status. Bedly does not receive payment card details or create an account.</p>
+    <p>The app keeps a local entitlement snapshot so the interface can continue showing whether Pro features are active between RevenueCat refreshes.</p>
+
+    <h2>Photos</h2>
+    <p>Verification photos are processed on device and discarded after scoring. They are not saved to the app's history, written to Photos, sent to a server, or used for tracking. While an alarm is still waiting for verification, the app may keep a bounded set of compact duplicate-attempt signatures to reject repeated or near-duplicate attempts; those signatures are not photos and are cleared when the session is verified, snoozed, bypassed, or logged as an unverified stop.</p>
+    <p>Users can optionally save a made-bed reference photo. The reference photo stays inside the app container on the device with file protection and can be deleted from Settings.</p>
+
+    <h2>Local Alarm Data</h2>
+    <p>Alarm settings, app settings, and completion history are stored locally on the device. History contains metadata such as timestamp, status, confidence, and attempt count. It does not contain bedroom photos or duplicate-attempt image signatures after a verification session ends.</p>
+
+    <h2>Permissions</h2>
+    <p>Bedly requests alarm permission to schedule wake-up alarms and camera permission to capture made-bed reference and verification photos. The app does not request Photo Library access.</p>
+
+    <h2>Network And Tracking</h2>
+    <p>The app does not require network access for alarm creation, alarm delivery, bed verification, emergency bypass, local history, or reference-photo management. It does not track users across apps or websites.</p>
+    <p>Network access is used by Apple's StoreKit system and RevenueCat when a user loads plans, buys, restores, refreshes, or manages a subscription. See RevenueCat's privacy policy at <a href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a>.</p>
+
+    <h2>Contact</h2>
+    <p>For help, use the <a href="support.html">Bedly support page</a>.</p>
+  </div>
+</body>
+</html>
