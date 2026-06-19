@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bedly Support</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --accent: #ff8a1c;
+      --text: #111111;
+      --muted: #62666d;
+      --surface: #f6f6f8;
+      --rule: #dedee3;
+    }
+
+    body {
+      margin: 0;
+      font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background: white;
+    }
+
+    .page {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 56px 22px 72px;
+    }
+
+    .page-header {
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 28px;
+      padding-bottom: 24px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 40px;
+      line-height: 1.1;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      margin: 30px 0 8px;
+      font-size: 23px;
+      letter-spacing: 0;
+    }
+
+    p, li {
+      color: var(--muted);
+    }
+
+    a {
+      color: var(--accent);
+    }
+
+    .badge {
+      display: inline-block;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .summary {
+      background: var(--surface);
+      border-radius: 8px;
+      padding: 16px 18px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text: #f4f4f6;
+        --muted: #c4c5ca;
+        --surface: #1d1d20;
+        --rule: #333339;
+      }
+
+      body {
+        background: #111114;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="page-header">
+      <span class="badge">Bedly</span>
+      <h1>Support</h1>
+      <p>Help for setup, verification, safety controls, and local privacy.</p>
+    </div>
+
+    <div class="summary">
+      <p>Bedly is an iOS 26+ alarm app that completes only after made-bed verification. Create an alarm, grant alarm and camera permissions, and set a made-bed reference photo in Settings if the build does not include a trained BedMadeClassifier model.</p>
+    </div>
+
+    <h2>Verification Tips</h2>
+    <ul>
+      <li>Make the bed before taking the verification photo.</li>
+      <li>Keep the full bed in frame.</li>
+      <li>Use enough light to see bedding and pillows clearly.</li>
+      <li>Avoid blurry, dark, overexposed, or partial photos.</li>
+      <li>Take a fresh photo from the camera. Screenshots, repeated attempts, and exact reference-photo replays do not complete verification.</li>
+    </ul>
+
+    <h2>Reference Photo</h2>
+    <p>The optional made-bed reference photo stays on the device in the app container with file protection. You can retake or delete it from Settings. If no trained model is bundled, the app needs a usable reference photo before alarms can be verified.</p>
+
+    <h2>Alarm Safety</h2>
+    <p>Snooze schedules a short follow-up alarm and keeps verification active.</p>
+    <p>Emergency Bypass is always available for safety. It stops the active alarm and records the session as bypassed, not verified.</p>
+    <p>If the system Stop action is used before verification, Bedly records an unverified stop and re-arms a follow-up alarm until the session is verified, snoozed, or bypassed.</p>
+
+    <h2>Privacy</h2>
+    <p>Verification photos are processed on device and discarded after scoring. They are not uploaded, saved to Photos, or stored in history. While verification is pending, the app keeps only a bounded set of compact duplicate-attempt signatures so repeated photos cannot complete the alarm; those signatures are cleared before the session becomes history. History stores metadata such as timestamp, result, confidence, and attempt count.</p>
+    <p>See the <a href="privacy.html">privacy policy</a> for more detail.</p>
+  </div>
+</body>
+</html>
