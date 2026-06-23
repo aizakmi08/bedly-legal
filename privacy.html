@@ -86,7 +86,7 @@
     <div class="page-header">
       <span class="badge">Bedly</span>
       <h1>Privacy Policy</h1>
-      <p>Effective date: June 16, 2026</p>
+      <p>Effective date: June 19, 2026</p>
     </div>
 
     <div class="summary">
@@ -95,22 +95,26 @@
 
     <h2>Data Collection</h2>
     <p>Bedly does not include account creation, login, third-party tracking, analytics SDKs, advertising SDKs, or photo uploads.</p>
-    <p>Bedly Pro subscriptions are processed by Apple and managed with RevenueCat. RevenueCat receives subscription purchase history and an anonymous app user ID so the app can unlock Pro features, restore purchases, and show subscription status. Bedly does not receive payment card details or create an account.</p>
+    <p>Bedly purchases are processed by Apple and managed with RevenueCat. RevenueCat receives purchase history and an anonymous app user ID so the app can unlock Pro features, restore purchases, and show Pro access. Bedly does not receive payment card details or create an account.</p>
     <p>The app keeps a local entitlement snapshot so the interface can continue showing whether Pro features are active between RevenueCat refreshes.</p>
+
+    <h2>HealthKit And Smart Wake</h2>
+    <p>Smart Wake can optionally read Apple Watch Sleep Analysis from HealthKit after you grant permission. Bedly uses this data only on device to decide whether a Smart Wake alarm can move inside your selected wake window. Deep sleep is avoided when choosing an earlier wake moment, and Apple Watch stage data is preferred over lower-confidence sleep-cycle estimates.</p>
+    <p>Auto Smart Wake can keep a latest-time fallback alarm armed, detect a recent Apple Watch sleep session, request a best-effort background refresh near the wake window, use a conservative sleep-cycle estimate when useful, and update the managed alarm when local sleep data suggests a better wake moment. Raw HealthKit sleep samples are not uploaded, sold, synced, used for tracking, or stored as a sleep log. Smart Wake alarm records store only planning metadata such as latest wake time, wake window, selected wake time, selected timing source, optional selected sleep-stage label, compact confidence/reason text, managed alarm ID, recent planning timestamps, and the last local sleep-data check status such as checked time, sample counts, useful-sample count, optional source label, compact observed-stage summary, and local error text.</p>
 
     <h2>Photos</h2>
     <p>Verification photos are processed on device and discarded after scoring. They are not saved to the app's history, written to Photos, sent to a server, or used for tracking. While an alarm is still waiting for verification, the app may keep a bounded set of compact duplicate-attempt signatures to reject repeated or near-duplicate attempts; those signatures are not photos and are cleared when the session is verified, snoozed, bypassed, or logged as an unverified stop.</p>
-    <p>Users can optionally save a made-bed reference photo. The reference photo stays inside the app container on the device with file protection and can be deleted from Settings.</p>
+    <p>Users can optionally set, retake, or reset a made-bed reference photo in Settings. Optional bed references are stored only on this device under app storage with file protection and may be used as one extra on-device verification signal. Bedly does not require a reference photo to create alarms or complete verification, and verification photos are still discarded after scoring.</p>
 
     <h2>Local Alarm Data</h2>
     <p>Alarm settings, app settings, and completion history are stored locally on the device. History contains metadata such as timestamp, status, confidence, and attempt count. It does not contain bedroom photos or duplicate-attempt image signatures after a verification session ends.</p>
 
     <h2>Permissions</h2>
-    <p>Bedly requests alarm permission to schedule wake-up alarms and camera permission to capture made-bed reference and verification photos. The app does not request Photo Library access.</p>
+    <p>Bedly requests alarm permission to schedule wake-up alarms, camera permission to capture fresh made-bed verification photos, and optional HealthKit read permission for Apple Watch Sleep Analysis used by Smart Wake. The app does not request Photo Library access.</p>
 
     <h2>Network And Tracking</h2>
-    <p>The app does not require network access for alarm creation, alarm delivery, bed verification, emergency bypass, local history, or reference-photo management. It does not track users across apps or websites.</p>
-    <p>Network access is used by Apple's StoreKit system and RevenueCat when a user loads plans, buys, restores, refreshes, or manages a subscription. See RevenueCat's privacy policy at <a href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a>.</p>
+    <p>The app does not require network access for alarm creation, alarm delivery, bed verification, emergency bypass, or local history. It does not track users across apps or websites.</p>
+    <p>Network access is used by Apple's StoreKit system and RevenueCat when a user loads plans, buys, restores, refreshes, or manages Pro access. See RevenueCat's privacy policy at <a href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a>.</p>
 
     <h2>Contact</h2>
     <p>For help, use the <a href="support.html">Bedly support page</a>.</p>
