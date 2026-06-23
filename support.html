@@ -90,7 +90,7 @@
     </div>
 
     <div class="summary">
-      <p>Bedly is an iOS 26+ alarm app that completes only after made-bed verification. Create an alarm, grant alarm and camera permissions, and set a made-bed reference photo in Settings if the build does not include a trained BedMadeClassifier model.</p>
+      <p>Bedly is an iOS 26+ alarm app that completes only after made-bed verification. Create an alarm, grant alarm and camera permissions, then take a fresh made-bed photo when the alarm rings.</p>
     </div>
 
     <h2>Verification Tips</h2>
@@ -99,19 +99,22 @@
       <li>Keep the full bed in frame.</li>
       <li>Use enough light to see bedding and pillows clearly.</li>
       <li>Avoid blurry, dark, overexposed, or partial photos.</li>
-      <li>Take a fresh photo from the camera. Screenshots, repeated attempts, and exact reference-photo replays do not complete verification.</li>
+      <li>Take a fresh photo from the camera. Screenshots, repeated attempts, and old-photo replays do not complete verification.</li>
+      <li>Optional Bed Reference in Settings can set, retake, or reset a local reference photo. It can help Bedly compare your own bed locally, but it is not required for alarm creation or verification.</li>
     </ul>
 
-    <h2>Reference Photo</h2>
-    <p>The optional made-bed reference photo stays on the device in the app container with file protection. You can retake or delete it from Settings. If no trained model is bundled, the app needs a usable reference photo before alarms can be verified.</p>
+    <h2>Smart Wake</h2>
+    <p>Smart Wake is available in the Sleep tab for Bedly Pro subscribers. Choose a latest wake time and a wake window. Bedly schedules the latest wake time first, can use a conservative sleep-cycle estimate after detecting when you fell asleep, and replaces that estimate when Apple Watch Sleep Analysis shows a better lighter phase inside the window.</p>
+    <p>Auto Smart Wake can stay armed overnight. Bedly keeps the latest wake time scheduled as the safe fallback, watches for a detected Apple Watch sleep session, requests a best-effort background refresh near the wake window, automatically updates one managed alarm when local sleep data suggests a better wake moment, and rolls that managed alarm forward after completion so tomorrow's fallback is prepared.</p>
+    <p>Smart Wake requires HealthKit Sleep Analysis permission and recent Apple Watch sleep data. If permission is denied, Background App Refresh is unavailable, or no useful Watch data is available, Bedly keeps the latest wake fallback instead. The Sleep tab shows whether access is not connected, checked with no sleep samples, checked with Health sleep samples but no Apple Watch data, checked with Watch data but no usable wake-stage signal, or backed by recent Apple Watch wake-stage data. When any Smart Wake alarm fires, made-bed verification is still required.</p>
 
     <h2>Alarm Safety</h2>
     <p>Snooze schedules a short follow-up alarm and keeps verification active.</p>
-    <p>Emergency Bypass is always available for safety. It stops the active alarm and records the session as bypassed, not verified.</p>
+    <p>Emergency Bypass is a free optional safety setting. It is off by default; when enabled before an alarm fires, it appears during verification and records the session as bypassed, not verified.</p>
     <p>If the system Stop action is used before verification, Bedly records an unverified stop and re-arms a follow-up alarm until the session is verified, snoozed, or bypassed.</p>
 
     <h2>Privacy</h2>
-    <p>Verification photos are processed on device and discarded after scoring. They are not uploaded, saved to Photos, or stored in history. While verification is pending, the app keeps only a bounded set of compact duplicate-attempt signatures so repeated photos cannot complete the alarm; those signatures are cleared before the session becomes history. History stores metadata such as timestamp, result, confidence, and attempt count.</p>
+    <p>Verification photos are processed on device and discarded after scoring. They are not uploaded, saved to Photos, or stored in history. Optional bed references are stored only on this device and can be set, changed, or reset from Settings. While verification is pending, the app keeps only a bounded set of compact duplicate-attempt signatures so repeated photos cannot complete the alarm; those signatures are cleared before the session becomes history. History stores metadata such as timestamp, result, confidence, and attempt count. Smart Wake reads Apple Watch Sleep Analysis locally and does not upload or store raw sleep samples. Auto Smart Wake stores only the configured latest wake time, wake window, managed alarm ID, selected wake time, selected timing source, compact confidence/reason text, recent planning timestamps, and last local sleep-data check status such as checked time, sample counts, useful-sample count, optional source label, compact observed-stage summary, and local error text.</p>
     <p>See the <a href="privacy.html">privacy policy</a> for more detail.</p>
   </div>
 </body>
