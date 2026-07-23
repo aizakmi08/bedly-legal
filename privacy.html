@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bedly Privacy Policy</title>
+  <title>TrulyUp Privacy Policy</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -84,40 +84,36 @@
 <body>
   <div class="page">
     <div class="page-header">
-      <span class="badge">Bedly</span>
+      <span class="badge">TrulyUp</span>
       <h1>Privacy Policy</h1>
       <p>Effective date: June 19, 2026</p>
     </div>
 
     <div class="summary">
-      <p>Bedly is designed as a local-first alarm and morning routine app. The app does not sell personal data, track users across apps or websites, or upload bedroom photos.</p>
+      <p>TrulyUp is designed as a local-first alarm and morning routine app. The app does not sell personal data, track users across apps or websites, or upload bedroom photos.</p>
     </div>
 
     <h2>Data Collection</h2>
-    <p>Bedly does not include account creation, login, third-party tracking, analytics SDKs, advertising SDKs, or photo uploads.</p>
-    <p>Bedly purchases are processed by Apple and managed with RevenueCat. RevenueCat receives purchase history and an anonymous app user ID so the app can unlock Pro features, restore purchases, and show Pro access. Bedly does not receive payment card details or create an account.</p>
+    <p>TrulyUp does not include account creation, login, third-party tracking, analytics SDKs, advertising SDKs, or photo uploads.</p>
+    <p>TrulyUp purchases are processed by Apple and managed with RevenueCat. RevenueCat receives purchase history and an anonymous app user ID so the app can unlock Pro features, restore purchases, and show Pro access. TrulyUp does not receive payment card details or create an account.</p>
     <p>The app keeps a local entitlement snapshot so the interface can continue showing whether Pro features are active between RevenueCat refreshes.</p>
 
-    <h2>HealthKit And Smart Wake</h2>
-    <p>Smart Wake can optionally read Apple Health Sleep Analysis from HealthKit after you grant permission. Bedly uses this data only on device to decide whether a Smart Wake alarm can move inside your selected wake window. Deep sleep is avoided when choosing an earlier wake moment, and HealthKit sleep-stage data is preferred over lower-confidence sleep-cycle estimates.</p>
-    <p>Auto Smart Wake can keep a latest-time fallback alarm armed, detect a recent HealthKit sleep session, request a best-effort background refresh near the wake window, use a conservative sleep-cycle estimate when useful, and update the managed alarm when local sleep data suggests a better wake moment. Raw HealthKit sleep samples are not uploaded, sold, synced, used for tracking, or stored as a sleep log. Smart Wake alarm records store only planning metadata such as latest wake time, wake window, selected wake time, selected timing source, optional selected sleep-stage label, compact confidence/reason text, managed alarm ID, recent planning timestamps, and the last local sleep-data check status such as checked time, sample counts, useful-sample count, optional source label, compact observed-stage summary, and local error text.</p>
-
     <h2>Photos</h2>
-    <p>Verification photos are processed on device and discarded after scoring. They are not saved to the app's history, written to Photos, sent to a server, or used for tracking. While an alarm is still waiting for verification, the app may keep a bounded set of compact duplicate-attempt signatures to reject repeated or near-duplicate attempts; those signatures are not photos and are cleared when the session is verified, snoozed, bypassed, or logged as an unverified stop.</p>
-    <p>Users set, retake, or reset a made-bed reference photo in Settings. A usable local reference is required before enabling new alarms so Bedly can compare verification photos against the user's own bed. Bed references are stored only on this device under app storage with file protection and are not uploaded. Verification photos are still discarded after scoring.</p>
+    <p>Verification photos are processed on device and discarded after scoring. They are not saved to the app's history, written to Photos, sent to a server, or used for tracking. While an alarm is still waiting for verification, the app may keep a bounded set of compact retry fingerprints for local session bookkeeping. Those fingerprints are not photos, never override a passing on-device verification, and are cleared when the session is verified, bypassed, or logged as an unverified stop.</p>
+    <p>Standard Bed verification does not require a saved reference. Users with a sofa, floor bed, or another unusual sleep setup can choose Custom Setup and set, retake, or reset a made-bed reference in Settings. Custom references are stored only on this device under app storage with file protection and are not uploaded. Verification photos are discarded after scoring.</p>
 
     <h2>Local Alarm Data</h2>
-    <p>Alarm settings, app settings, and completion history are stored locally on the device. History contains metadata such as timestamp, status, confidence, and attempt count. It does not contain bedroom photos or duplicate-attempt image signatures after a verification session ends.</p>
+    <p>Alarm settings, app settings, and completion history are stored locally on the device. History contains metadata such as timestamp, status, confidence, and attempt count. It does not contain bedroom photos or retry fingerprints after a verification session ends.</p>
 
     <h2>Permissions</h2>
-    <p>Bedly requests alarm permission to schedule wake-up alarms, camera permission to capture fresh made-bed verification photos, and optional HealthKit read permission for Apple Health Sleep Analysis used by Smart Wake. The app does not request Photo Library access.</p>
+    <p>TrulyUp requests alarm permission to schedule wake-up alarms and camera permission to capture fresh made-bed verification photos. The app does not request HealthKit or Photo Library access.</p>
 
     <h2>Network And Tracking</h2>
     <p>The app does not require network access for alarm creation, alarm delivery, bed verification, emergency bypass, or local history. It does not track users across apps or websites.</p>
     <p>Network access is used by Apple's StoreKit system and RevenueCat when a user loads plans, buys, restores, refreshes, or manages Pro access. See RevenueCat's privacy policy at <a href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a>.</p>
 
     <h2>Contact</h2>
-    <p>For help, use the <a href="support.html">Bedly support page</a>.</p>
+    <p>For help, use the <a href="support.html">TrulyUp support page</a>.</p>
   </div>
 </body>
 </html>

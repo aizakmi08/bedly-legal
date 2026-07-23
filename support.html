@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bedly Support</title>
+  <title>TrulyUp Support</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -84,13 +84,13 @@
 <body>
   <div class="page">
     <div class="page-header">
-      <span class="badge">Bedly</span>
+      <span class="badge">TrulyUp</span>
       <h1>Support</h1>
       <p>Help for setup, verification, safety controls, and local privacy.</p>
     </div>
 
     <div class="summary">
-      <p>Bedly is an iOS 26+ alarm app that completes only after made-bed verification. Create an alarm, grant alarm and camera permissions, then take a fresh made-bed photo when the alarm rings.</p>
+      <p>TrulyUp is an iOS 26+ alarm app that completes only after made-bed verification. Create an alarm, grant alarm and camera permissions, then take a fresh made-bed photo when the alarm rings.</p>
     </div>
 
     <h2>Verification Tips</h2>
@@ -99,22 +99,20 @@
       <li>Keep the full bed in frame.</li>
       <li>Use enough light to see bedding and pillows clearly.</li>
       <li>Avoid blurry, dark, overexposed, or partial photos.</li>
-      <li>Take a fresh photo from the camera. Screenshots, repeated attempts, and old-photo replays do not complete verification.</li>
-      <li>Bed Reference in Settings can set, retake, or reset a local reference photo. A usable reference is required before enabling new alarms so Bedly can compare verification photos against your own bed locally. If a previous enabled alarm needs reference setup after an update, set a usable reference and Bedly can schedule it again.</li>
+      <li>Take a fresh photo from the camera. The saved reference itself, screenshots, old-photo replays, selfies, and non-bed scenes do not complete verification.</li>
+      <li>Bed Verification in Settings offers Standard Bed for regular beds and mattresses, with no reference required, and Custom Setup for sofas, floor beds, or unusual sleep surfaces. Custom Setup stores one protected local reference that can be set, retaken, or reset.</li>
     </ul>
 
-    <h2>Smart Wake</h2>
-    <p>Smart Wake is available in the Sleep tab for Bedly Pro subscribers. Choose a latest wake time and a wake window. Bedly schedules the latest wake time first, can use a conservative sleep-cycle estimate after detecting when you fell asleep, and replaces that estimate when Apple Health Sleep Analysis shows a better lighter phase inside the window.</p>
-    <p>Auto Smart Wake can stay armed overnight. Bedly keeps the latest wake time scheduled as the safe fallback, watches for a detected HealthKit sleep session, requests a best-effort background refresh near the wake window, automatically updates one managed alarm when local sleep data suggests a better wake moment, and rolls that managed alarm forward after completion so tomorrow's fallback is prepared.</p>
-    <p>Smart Wake requires HealthKit Sleep Analysis permission and recent Health sleep data. If permission is denied, Background App Refresh is unavailable, or no useful sleep-stage data is available, Bedly keeps the latest wake fallback instead. The Sleep tab shows whether access is not connected, checked with no sleep samples, checked with Health sleep samples, checked with sleep-stage data but no usable wake-stage signal, or backed by recent light wake-stage data. When any Smart Wake alarm fires, made-bed verification is still required.</p>
+    <h2>Sleep Calculator</h2>
+    <p>The Sleep tab provides simple bedtime and wake-time suggestions using 90-minute sleep-cycle estimates plus about 15 minutes to fall asleep. Select a suggestion, then create the alarm you choose. The calculator does not read Apple Health or monitor sleep stages.</p>
 
     <h2>Alarm Safety</h2>
-    <p>Snooze schedules a short follow-up alarm and keeps verification active.</p>
+    <p>TrulyUp alarms do not offer snooze. A passing bed photo is the normal completion path.</p>
     <p>Emergency Bypass is a free optional safety setting. It is off by default; when enabled before an alarm fires, it appears during verification and records the session as bypassed, not verified.</p>
-    <p>If the system Stop action is used before verification, Bedly records an unverified stop and re-arms a follow-up alarm until the session is verified, snoozed, or bypassed.</p>
+    <p>If the system Stop action is used before verification, TrulyUp records an unverified stop and re-arms the next system alarm in about two seconds until the session is verified or a previously enabled Emergency Bypass is used.</p>
 
     <h2>Privacy</h2>
-    <p>Verification photos are processed on device and discarded after scoring. They are not uploaded, saved to Photos, or stored in history. Bed references are stored only on this device and can be set, changed, or reset from Settings. While verification is pending, the app keeps only a bounded set of compact duplicate-attempt signatures so repeated photos cannot complete the alarm; those signatures are cleared before the session becomes history. History stores metadata such as timestamp, result, confidence, and attempt count. Smart Wake reads Apple Health Sleep Analysis locally and does not upload or store raw sleep samples. Auto Smart Wake stores only the configured latest wake time, wake window, managed alarm ID, selected wake time, selected timing source, compact confidence/reason text, recent planning timestamps, and last local sleep-data check status such as checked time, sample counts, useful-sample count, optional source label, compact observed-stage summary, and local error text.</p>
+    <p>Verification photos are processed on device and discarded after scoring. They are not uploaded, saved to Photos, or stored in history. Bed references are stored only on this device and can be set, changed, or reset from Settings. While verification is pending, the app keeps only a bounded set of compact retry fingerprints for local session bookkeeping; they never override a passing on-device verification and are cleared when the session ends. Completion metadata can include timestamp, result, confidence, and attempt count.</p>
     <p>See the <a href="privacy.html">privacy policy</a> for more detail.</p>
   </div>
 </body>
