@@ -104,9 +104,10 @@
 
     <h2>Local Alarm Data</h2>
     <p>Alarm settings, app settings, and completion history are stored locally on the device. History contains metadata such as timestamp, status, confidence, and attempt count. It does not contain bedroom photos or retry fingerprints after a verification session ends.</p>
+    <p>Alarm audio selected through Apple's Files picker is converted to a compatible local sound and stored in protected app storage. TrulyUp does not upload, share, or analyze imported audio, and receives access only to the file the user explicitly chooses.</p>
 
     <h2>Permissions</h2>
-    <p>TrulyUp requests alarm permission to schedule wake-up alarms and camera permission to capture fresh made-bed verification photos. The app does not request HealthKit or Photo Library access.</p>
+    <p>TrulyUp requests alarm permission to schedule wake-up alarms and camera permission to capture fresh made-bed verification photos. Choosing a personal alarm sound uses Apple's Files picker and does not grant broad Files access. The app does not request HealthKit or Photo Library access.</p>
 
     <h2>Network And Tracking</h2>
     <p>The app does not require network access for alarm creation, alarm delivery, bed verification, emergency bypass, or local history. It does not track users across apps or websites.</p>
